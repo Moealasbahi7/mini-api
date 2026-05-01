@@ -1,3 +1,5 @@
+#j'ai verifié .Sana
+#moi aussi : mia
 FROM python:3.11-slim
 
 WORKDIR /app
