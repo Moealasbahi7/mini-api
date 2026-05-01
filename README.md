@@ -6,8 +6,8 @@ The application is containerized using Docker and deployed on Google Cloud Run.
 
 ## Team Members
 Moe Al Asbahi API development and Cloud deployment  
-Mia Teixeira Docker setup  
-Sana Zouaoui AI integration  
+Mia Teixeira Docker setup
+Sana Zouaoui API development and AI integration  
 
 The project was initially done using separate branches for each of us . However, I (moe) did a small error by sending API key to the github which required cleaning but i did not know tht it will delete all the  history. During this process. As a result only the final version of the project is visible in the master branch but you can see the other branchs. (sanas work and mias work), agian I am sorry for that sir and it was made at the final check up and i just deleted the api key.
 
