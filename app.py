@@ -4,7 +4,10 @@ from google.cloud import storage
 import json
 import vertexai
 from vertexai.generative_models import GenerativeModel
+
 app = FastAPI()
+
+vertexai.init(project="mini-api-493010", location="us-central1")
 
 BUCKET_NAME = "mini-api-bucket-123"
 FILE_NAME = "data.json"
@@ -57,6 +60,9 @@ def post_data(item: dict):
 
 @app.get("/poem")
 def poem():
-    model = GenerativeModel("gemini-pro")
-    response = model.generate_content("Write a short poem about life")
-    return {"poem": response.text}
+    try:
+        model = GenerativeModel("gemini-1.5-flash")
+        response = model.generate_content("Write a short poem about life")
+        return {"poem": response.text}
+    except Exception as e:
+        return {"error": str(e)}
